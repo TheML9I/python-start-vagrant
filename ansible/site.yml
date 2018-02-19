@@ -1,0 +1,7 @@
+---
+
+- name: Configure vm to learn python
+  hosts: dev
+  roles:
+    - python
+

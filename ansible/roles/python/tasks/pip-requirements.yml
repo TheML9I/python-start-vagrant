@@ -1,0 +1,16 @@
+---
+- name: Upgrade PIP
+  become: yes
+  become_user: "vagrant"
+  pip:
+    name: pip
+    virtualenv: "devenv"
+    virtualenv_python: "python3"
+    extra_args: "-U"
+- name: Install pip dependencies
+  become: yes
+  become_user: "vagrant"
+  pip:
+    requirements: ""
+    virtualenv: "{{ virtualenv }}"
+    extra_args: "-U"

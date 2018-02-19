@@ -1,0 +1,11 @@
+---
+
+- name: install python 3
+  become: yes
+  apt:
+    name: python3
+
+- name: install python-pip
+  become: yes
+  apt:
+    name: python-pip
